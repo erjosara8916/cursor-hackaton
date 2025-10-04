@@ -6,6 +6,7 @@ import { Spinner } from "#/components/spinner/spinner.component";
 import { scrapeLaPrensaGrafica } from "#/services/news-scraper/la-prensa-grafica.scraper.server";
 
 import type { Route } from "./+types/route";
+import Markdown from "react-markdown";
 
 export const meta: Route.MetaFunction = () => {
   return [
@@ -41,7 +42,8 @@ export const loader = async ({ request }: Route.LoaderArgs) => {
     const newsArticles = allArticles.slice(startIndex, endIndex);
 
     // Check if we're using mock data
-    const isMockData = newsArticles.length > 0 && newsArticles[0].notes.includes("Mock article");
+    const isMockData =
+      newsArticles.length > 0 && newsArticles[0].notes.includes("Mock article");
 
     return {
       newsArticles,
@@ -52,7 +54,10 @@ export const loader = async ({ request }: Route.LoaderArgs) => {
     };
   } catch (error) {
     console.error("Error loading news:", error);
-    console.error("Stack trace:", error instanceof Error ? error.stack : "No stack trace");
+    console.error(
+      "Stack trace:",
+      error instanceof Error ? error.stack : "No stack trace",
+    );
     return {
       newsArticles: [],
       currentPage: 1,
@@ -65,8 +70,14 @@ export const loader = async ({ request }: Route.LoaderArgs) => {
 };
 
 export default function NewsRoute(props: Route.ComponentProps) {
-  const { newsArticles, currentPage, totalPages, totalArticles, error, isMockData } =
-    props.loaderData;
+  const {
+    newsArticles,
+    currentPage,
+    totalPages,
+    totalArticles,
+    error,
+    isMockData,
+  } = props.loaderData;
 
   return (
     <div className="min-h-screen bg-gray-50 p-8">
@@ -81,7 +92,8 @@ export default function NewsRoute(props: Route.ComponentProps) {
             </p>
             {isMockData && (
               <div className="mt-2 rounded-lg bg-yellow-100 px-4 py-2 text-sm text-yellow-800">
-                ℹ️ Currently showing sample data. Real-time scraping is being optimized.
+                ℹ️ Currently showing sample data. Real-time scraping is being
+                optimized.
               </div>
             )}
           </div>
@@ -286,8 +298,8 @@ Please provide your analysis in a well-structured format.`,
           </span>
         </div>
       ) : (
-        <div className="whitespace-pre-wrap text-gray-700">
-          {streamedText}
+        <div className="text-gray-700">
+          <Markdown components={markdownComponents}>{streamedText}</Markdown>
           {isLoading ? (
             <span className="inline-block h-5 w-1 animate-pulse bg-blue-500" />
           ) : null}
@@ -297,3 +309,64 @@ Please provide your analysis in a well-structured format.`,
   );
 }
 
+// Markdown component styles defined outside of the component to avoid re-creation
+const markdownComponents = {
+  h1: ({ children, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
+    <h1 className="mt-6 mb-4 text-3xl font-bold" {...props}>
+      {children}
+    </h1>
+  ),
+  h2: ({ children, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
+    <h2 className="mt-5 mb-3 text-2xl font-semibold" {...props}>
+      {children}
+    </h2>
+  ),
+  h3: ({ children, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
+    <h3 className="mt-4 mb-2 text-xl font-semibold" {...props}>
+      {children}
+    </h3>
+  ),
+  p: ({ children, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
+    <p className="mb-3" {...props}>
+      {children}
+    </p>
+  ),
+  ul: ({ children, ...props }: React.HTMLAttributes<HTMLUListElement>) => (
+    <ul className="mb-3 ml-6 list-disc" {...props}>
+      {children}
+    </ul>
+  ),
+  ol: ({ children, ...props }: React.HTMLAttributes<HTMLOListElement>) => (
+    <ol className="mb-3 ml-6 list-decimal" {...props}>
+      {children}
+    </ol>
+  ),
+  li: ({ children, ...props }: React.HTMLAttributes<HTMLLIElement>) => (
+    <li className="mb-1" {...props}>
+      {children}
+    </li>
+  ),
+  strong: ({ children, ...props }: React.HTMLAttributes<HTMLElement>) => (
+    <strong className="font-semibold" {...props}>
+      {children}
+    </strong>
+  ),
+  em: ({ children, ...props }: React.HTMLAttributes<HTMLElement>) => (
+    <em className="italic" {...props}>
+      {children}
+    </em>
+  ),
+  code: ({ children, ...props }: React.HTMLAttributes<HTMLElement>) => (
+    <code
+      className="rounded bg-gray-100 px-1 py-0.5 font-mono text-sm"
+      {...props}
+    >
+      {children}
+    </code>
+  ),
+  pre: ({ children, ...props }: React.HTMLAttributes<HTMLPreElement>) => (
+    <pre className="mb-3 overflow-x-auto rounded-lg bg-gray-100 p-4" {...props}>
+      {children}
+    </pre>
+  ),
+};

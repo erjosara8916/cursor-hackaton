@@ -36,9 +36,17 @@ export default function IndexRoute(props: Route.ComponentProps) {
   return (
     <div className="min-h-screen bg-gray-50 p-8">
       <div className="mx-auto max-w-6xl">
-        <h1 className="mb-8 text-4xl font-bold text-gray-900">
-          News Articles Analysis
-        </h1>
+        <div className="mb-8 flex items-center justify-between">
+          <h1 className="text-4xl font-bold text-gray-900">
+            News Articles Analysis
+          </h1>
+          <a
+            href="/news"
+            className="rounded-lg bg-blue-600 px-6 py-3 text-white transition hover:bg-blue-700"
+          >
+            Live News Scraper →
+          </a>
+        </div>
 
         <div className="mb-8 rounded-lg bg-white p-6 shadow-lg">
           <h2 className="mb-4 text-2xl font-semibold text-gray-800">

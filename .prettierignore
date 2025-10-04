@@ -1,0 +1,12 @@
+# Test files and folders
+/coverage/
+
+# Generated files and directories
+/.react-router/
+worker-configuration.d.ts
+
+# Build artifacts
+/.wrangler/
+/build/
+
+pnpm-lock.yaml

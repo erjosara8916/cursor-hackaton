@@ -1,0 +1,44 @@
+services:
+  db:
+    image: postgres:18.0-alpine@sha256:70b32afe0c274b4d93098fd724fcdaab3aba47270a4f1e63cbf9cc69d7bf1be4
+    container_name: melonook-management-system_db
+    environment:
+      - POSTGRES_USER=melonook-management-system
+      - POSTGRES_PASSWORD=melonook-management-system
+      - POSTGRES_DB=melonook-management-system
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - melonook-management-system_network
+    restart: unless-stopped
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - pg_isready -U melonook-management-system
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  adminer:
+    image: adminer:5.4.0@sha256:a3bea217657c5fbe995695a3c582e7860491b9bab90c827f12c03436f07b7c37
+    container_name: melonook-management-system_adminer
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - melonook-management-system_network
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
+    name: melonook-management-system_postgres_data
+
+networks:
+  melonook-management-system_network:
+    name: melonook-management-system_network
+    driver: bridge
+    # external: true

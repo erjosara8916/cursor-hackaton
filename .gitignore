@@ -1,0 +1,15 @@
+.DS_Store
+/node_modules/
+
+# Test files and folders
+/coverage/
+
+# Generated files and directories
+/.react-router/
+
+# Build artifacts
+/.wrangler/
+/build/
+
+# Environment
+.env*

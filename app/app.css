@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@plugin "tailwindcss-react-aria-components";
+@plugin "daisyui" {
+  themes: forest;
+}
+
+@theme {
+  --font-sans: "Geist Variable", Arial;
+}

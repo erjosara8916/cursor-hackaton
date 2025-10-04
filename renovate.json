@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    ":automergeMajor",
+    "config:best-practices",
+    "replacements:all",
+    "workarounds:all"
+  ],
+  "ignoreDeps": ["babel-plugin-react-compiler"],
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "rebaseWhen": "conflicted",
+  "reviewers": ["b-mendoza"]
+}

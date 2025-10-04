@@ -64,11 +64,11 @@ describe('tests to "TextField" component', () => {
 
       await user.click(input);
 
-      expect(onFocus).toHaveBeenCalledWith(expect.any(Object));
+      expect(onFocus).toHaveBeenCalledWithExactlyOnceWith(expect.any(Object));
 
       await user.tab();
 
-      expect(onBlur).toHaveBeenCalledWith(expect.any(Object));
+      expect(onBlur).toHaveBeenCalledWithExactlyOnceWith(expect.any(Object));
     });
 
     it("handles copy and paste", async () => {

@@ -165,7 +165,7 @@ describe('tests to "Button" component', () => {
       // Simulate form submission
       await user.click(button);
 
-      expect(onSubmit).toHaveBeenCalledWith(
+      expect(onSubmit).toHaveBeenCalledWithExactlyOnceWith(
         expect.objectContaining({
           type: "submit",
         }),

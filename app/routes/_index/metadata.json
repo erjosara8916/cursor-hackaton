@@ -1,0 +1,186 @@
+[
+  {
+    "url": "https://www.laprensagrafica.com/elsalvador/13500-estudiantes-realizan-examen-de-admision-2026-de-la-UES-20251004-0025.html",
+    "publication_date": "2025-10-04",
+    "source_name": "La Prensa Gráfica",
+    "headline": "13,500 estudiantes realizan examen de admisión 2026 de la UES",
+    "primary_topic": "Education / University admissions",
+    "key_entities": [
+      "Universidad de El Salvador (UES)",
+      "estudiantes (13,500)",
+      "autoridades de la UES"
+    ],
+    "main_themes": [
+      "Ingreso universitario 2026",
+      "capacidad de cupos (≈10,000 disponibles según autoridades)",
+      "inclusión de estudiantes con discapacidad en el proceso"
+    ],
+    "sentiment_editorial_stance": "Neutral / informational (reporting turnout, capacity figures)",
+    "notes": "Article reports number of examinees (~13,500) and cites available slots (~10,000) and mentions students with disabilities participating.",
+    "source_citations": ":contentReference[oaicite:0]{index=0}"
+  },
+  {
+    "url": "https://www.laprensagrafica.com/elsalvador/Conductor-lesionado-en-accidente-de-transito-en-Ciudad-Delgado-San-Salvador-Centro-20251004-0013.html",
+    "publication_date": "2025-10-04",
+    "source_name": "La Prensa Gráfica",
+    "headline": "Conductor lesionado en accidente de tránsito en Ciudad Delgado, San Salvador Centro",
+    "primary_topic": "Public safety / Traffic accident",
+    "key_entities": [
+      "Ciudad Delgado",
+      "kilómetro 14 1/2 de la carretera Panamericana",
+      "Policía Nacional Civil (PNC)",
+      "conductor lesionado"
+    ],
+    "main_themes": [
+      "Tránsito y accidentes viales",
+      "Servicios de emergencia y reporte policial",
+      "Impacto local en Ciudad Delgado / Troncal del Norte"
+    ],
+    "sentiment_editorial_stance": "Neutral / factual (local incident reporting)",
+    "notes": "Short local news item — one injured, location specified on Panamericana/Troncal del Norte; corroborated by PNC / local posts.",
+    "source_citations": ":contentReference[oaicite:1]{index=1}"
+  },
+  {
+    "url": "https://www.laprensagrafica.com/elsalvador/Que-hara-el-periodista-salvadoreno-Mario-Guevara-tras-su-deportacion-20251004-0012.html",
+    "publication_date": "2025-10-04",
+    "source_name": "La Prensa Gráfica",
+    "headline": "¿Qué hará el periodista salvadoreño Mario Guevara tras su deportación?",
+    "primary_topic": "Immigration / Press freedom / Human interest",
+    "key_entities": [
+      "Mario Guevara",
+      "ICE (U.S. Immigration and Customs Enforcement)",
+      "familia en EE. UU.",
+      "organizaciones de libertad de prensa (mencionadas in context)"
+    ],
+    "main_themes": [
+      "Deportación de un periodista (tras >100 días en custodia de ICE)",
+      "Impacto en la libertad de prensa y reacciones de organizaciones defensores",
+      "Planes personales de Guevara (ej. escribir un libro sobre historias de inmigrantes según la entrevista)"
+    ],
+    "sentiment_editorial_stance": "Sympathetic / concerned (human-interest framing and focus on consequences for journalist and family)",
+    "notes": "La Prensa Gráfica interviewed Guevara about plans after deportation (writing a book, etc.). Broad international coverage corroborates deportation and rights-groups' concern. ",
+    "source_citations": ":contentReference[oaicite:2]{index=2}"
+  },
+  {
+    "url": "https://www.laprensagrafica.com/elsalvador/El-analfabetismo-en-El-Salvador-aumento-en-2024-20251003-0103.html",
+    "publication_date": "2025-10-03",
+    "source_name": "La Prensa Gráfica",
+    "headline": "El analfabetismo en El Salvador aumentó en 2024",
+    "primary_topic": "Education / Social statistics",
+    "key_entities": [
+      "Banco Central de Reserva (datos de Encuesta de Hogares)",
+      "personas de 10 años o más",
+      "tasa de analfabetismo (9.6% en 2024)"
+    ],
+    "main_themes": [
+      "Aumento de la tasa de analfabetismo (2023 → 2024; ~0.25–0.3 pp increase)",
+      "Persistencia de brechas educativas",
+      "Implicaciones para políticas públicas y educación básica"
+    ],
+    "sentiment_editorial_stance": "Concerned / cautionary (points to a reversal or slowing of prior improvements)",
+    "notes": "Article cites the Encuesta de Hogares / BCR data (reported 9.6% in 2024 vs ~9.3% in 2023). Other Salvadoran outlets report similar numbers.",
+    "source_citations": ":contentReference[oaicite:3]{index=3}"
+  },
+  {
+    "url": "https://www.laprensagrafica.com/elsalvador/Docentes-del-lenguaje-inclusivo-hay-otros-temas-prioritarios-20251003-0104.html",
+    "publication_date": "2025-10-03",
+    "source_name": "La Prensa Gráfica",
+    "headline": "Docentes: del 'lenguaje inclusivo' — hay otros temas prioritarios",
+    "primary_topic": "Education policy / Cultural policy",
+    "key_entities": [
+      "docentes (entrevistados)",
+      "Ministerio de Educación",
+      "Karla Trigueros (ministra, mentioned in wider context)",
+      "gobierno de Nayib Bukele (context of national policy)"
+    ],
+    "main_themes": [
+      "Debate sobre prohibición/uso del lenguaje inclusivo en escuelas",
+      "Docentes demandan priorizar problemas como presupuesto y cumplimiento de la ley",
+      "Context of recent ministry directives restricting inclusive language"
+    ],
+    "sentiment_editorial_stance": "Mixed / critical (reports teachers' view that policy focus is misplaced; contextual coverage shows government push to ban inclusive language)",
+    "notes": "Article relays teachers' reactions that other issues (budget, infrastructure, law compliance) are more pressing than debates on inclusive language; broader reporting ties this to recent Ministry/Presidential measures. ",
+    "source_citations": ":contentReference[oaicite:4]{index=4}"
+  },
+  {
+    "url": "https://www.laprensagrafica.com/elsalvador/Partidos-politicos-estaran-incluidos-en-nueva-ley-contra-lavado-de-dinero-20251003-0102.html",
+    "publication_date": "2025-10-03",
+    "source_name": "La Prensa Gráfica",
+    "headline": "Partidos políticos estarán incluidos en nueva ley contra lavado de dinero",
+    "primary_topic": "Legislation / Finance / Politics",
+    "key_entities": [
+      "Asamblea Legislativa",
+      "Comisión de Seguridad",
+      "partidos políticos",
+      "Superintendencia del Sistema Financiero (SSF) (context)"
+    ],
+    "main_themes": [
+      "Reforma de la ley antilavado para ampliar sujetos obligados (incluyendo partidos políticos)",
+      "Debate sobre alcance y efectos de la norma",
+      "Links to thresholds, reporting obligations and anti-money-laundering compliance"
+    ],
+    "sentiment_editorial_stance": "Neutral / explanatory (reports legislative change and positions of actors)",
+    "notes": "Article summarizes Commission activity and that political parties would be explicitly included among entities regulated by the new anti-money-laundering law; related pieces discuss changes to declaration thresholds and regulatory scope.",
+    "source_citations": ":contentReference[oaicite:5]{index=5}"
+  },
+  {
+    "url": "https://www.laprensagrafica.com/elsalvador/Diputado-de-Nuevas-Ideas-pide-investigar-aplicacion-de-Ley-de-Agentes-Extranjeros--a-remesas-20251003-0101.html",
+    "publication_date": "2025-10-03",
+    "source_name": "La Prensa Gráfica",
+    "headline": "Diputado de Nuevas Ideas pide investigar aplicación de Ley de Agentes Extranjeros a remesas",
+    "primary_topic": "Politics / Financial regulation / Public concerns",
+    "key_entities": [
+      "diputado Caleb Navarro (Nuevas Ideas)",
+      "diputado William Soriano (audio referenced)",
+      "Superintendencia del Sistema Financiero (SSF)"
+    ],
+    "main_themes": [
+      "Preocupaciones y reportes sobre descuentos aplicados a remesas bajo el argumento de 'agente extranjero'",
+      "Pedidos a autoridades (SSF) para investigar denuncias",
+      "Political debate over whether remittances could be affected by the 30% foreign agents tax / compliance rules"
+    ],
+    "sentiment_editorial_stance": "Concern / investigatory (focus on verifying alleged impacts on remittances; some political alarm)",
+    "notes": "Article notes a legislator raised reports of remittance recipients being charged/discunted purportedly under 'agents extranjeros' rules and requested SSF review; government/other sources have issued denials in parallel coverage.",
+    "source_citations": ":contentReference[oaicite:6]{index=6}"
+  },
+  {
+    "url": "https://www.laprensagrafica.com/elsalvador/MOVIR-muestra-preocupacion-por-juicios-masivos-que-podrian-durar-meses-en-El-Salvador-20251003-0100.html",
+    "publication_date": "2025-10-03",
+    "source_name": "La Prensa Gráfica",
+    "headline": "MOVIR muestra preocupación por juicios masivos que podrían durar meses en El Salvador",
+    "primary_topic": "Human rights / Legal system / Civil society",
+    "key_entities": [
+      "MOVIR (Movimiento de Víctimas del Régimen)",
+      "Félix López (representative, cited)",
+      "Fiscalía General (mentioned in context)"
+    ],
+    "main_themes": [
+      "Criticism/concern about mass trials of persons detained under the state of exception",
+      "Potential lengthy judicial processing (months) and impact on defendants' rights",
+      "Civil-society monitoring of justice process outcomes"
+    ],
+    "sentiment_editorial_stance": "Critical / concerned (civil-society alarm about fairness and duration of mass judicial processes)",
+    "notes": "MOVIR representative warns juicios masivos could last months; article highlights possible procedural and human-rights implications.",
+    "source_citations": ":contentReference[oaicite:7]{index=7}"
+  },
+  {
+    "url": "https://www.laprensagrafica.com/elsalvador/Denuncian-presiones-para-forzar-retiros-voluntarios-en-alcaldia-de-San-Salvador-Este-20251003-0089.html",
+    "publication_date": "2025-10-03",
+    "source_name": "La Prensa Gráfica",
+    "headline": "Denuncian presiones para forzar retiros voluntarios en alcaldía de San Salvador Este",
+    "primary_topic": "Labor / Municipal governance",
+    "key_entities": [
+      "empleados de la Alcaldía de San Salvador Este",
+      "autoridades municipales / recursos humanos",
+      "tope de retiro voluntario (ej. $15,000 reported)"
+    ],
+    "main_themes": [
+      "Denuncias de intimidación o presión para aceptar retiros 'voluntarios' con liquidación tope",
+      "Labor rights, municipal restructuring and potential politicization of personnel changes",
+      "Union / worker complaints and calls for clarification"
+    ],
+    "sentiment_editorial_stance": "Critical / exposé (reports worker allegations of intimidation and limited severance offers)",
+    "notes": "Workers claim they were summoned to accept a 'voluntary' retirement with an alleged cap (≈$15,000); municipal labor-rights context and prior similar cases in other municipalities are relevant.",
+    "source_citations": ":contentReference[oaicite:8]{index=8}"
+  }
+]

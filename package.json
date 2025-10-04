@@ -25,13 +25,16 @@
     "typegen:react-router": "react-router typegen"
   },
   "dependencies": {
+    "@ai-sdk/google": "^2.0.17",
     "@clerk/react-router": "2.0.1",
     "@date-fns/utc": "2.1.1",
     "@fontsource-variable/geist": "5.2.8",
     "@hookform/resolvers": "5.2.2",
+    "@openrouter/ai-sdk-provider": "^1.2.0",
     "@paralleldrive/cuid2": "2.2.2",
     "@tanstack/react-table": "8.21.3",
     "@unpic/react": "1.0.1",
+    "ai": "^5.0.60",
     "clsx": "2.1.1",
     "date-fns": "4.1.0",
     "drizzle-orm": "0.44.5",

@@ -2,6 +2,7 @@ import { createOpenRouter } from "@openrouter/ai-sdk-provider";
 import { streamText } from "ai";
 import { useEffect, useState } from "react";
 
+import logo from "#/assets/ia-news.png";
 import { Spinner } from "#/components/spinner/spinner.component";
 import { scrapeLaPrensaGrafica } from "#/services/news-scraper/la-prensa-grafica.scraper.server";
 
@@ -30,8 +31,8 @@ export const loader = async ({ request }: Route.LoaderArgs) => {
 
     console.log(`Loading news page ${page}...`);
 
-    // Scrape 50 articles to have enough for pagination
-    const allArticles = await scrapeLaPrensaGrafica(50);
+    // Scrape top 10 articles only
+    const allArticles = await scrapeLaPrensaGrafica(10);
 
     console.log(`Loaded ${allArticles.length} articles successfully`);
 
@@ -83,19 +84,25 @@ export default function NewsRoute(props: Route.ComponentProps) {
     <div className="min-h-screen bg-gray-50 p-8">
       <div className="mx-auto max-w-6xl">
         <div className="mb-8 flex items-center justify-between">
-          <div>
-            <h1 className="text-4xl font-bold text-gray-900">
-              Latest News from El Salvador
-            </h1>
-            <p className="mt-2 text-lg text-gray-600">
-              Scraped from La Prensa Gráfica
-            </p>
-            {isMockData && (
-              <div className="mt-2 rounded-lg bg-yellow-100 px-4 py-2 text-sm text-yellow-800">
-                ℹ️ Currently showing sample data. Real-time scraping is being
-                optimized.
-              </div>
-            )}
+          <div className="flex items-start gap-4">
+            <img
+              src={logo}
+              alt="IA News Logo"
+              className="h-16 w-16 rounded-lg object-contain"
+            />
+            <div>
+              <h1 className="text-4xl font-bold text-gray-900">
+                Latest News from El Salvador
+              </h1>
+              <p className="mt-2 text-lg text-gray-600">
+                Scraped from La Prensa Gráfica
+              </p>
+              {isMockData && (
+                <div className="mt-2 rounded-lg bg-yellow-100 px-4 py-2 text-sm text-yellow-800">
+                  ℹ️ Currently showing sample data. Real-time scraping is being optimized.
+                </div>
+              )}
+            </div>
           </div>
           <a
             href="/"

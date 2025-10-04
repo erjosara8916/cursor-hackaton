@@ -3,6 +3,7 @@ import { streamText } from "ai";
 import { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 
+import logo from "#/assets/ia-news.png";
 import { Spinner } from "#/components/spinner/spinner.component";
 
 import type { Route } from "./+types/route";
@@ -37,9 +38,16 @@ export default function IndexRoute(props: Route.ComponentProps) {
     <div className="min-h-screen bg-gray-50 p-8">
       <div className="mx-auto max-w-6xl">
         <div className="mb-8 flex items-center justify-between">
-          <h1 className="text-4xl font-bold text-gray-900">
-            News Articles Analysis
-          </h1>
+          <div className="flex items-center gap-4">
+            <img
+              src={logo}
+              alt="IA News Logo"
+              className="h-16 w-16 rounded-lg object-contain"
+            />
+            <h1 className="text-4xl font-bold text-gray-900">
+              News Articles Analysis
+            </h1>
+          </div>
           <a
             href="/news"
             className="rounded-lg bg-blue-600 px-6 py-3 text-white transition hover:bg-blue-700"

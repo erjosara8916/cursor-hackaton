@@ -1,6 +1,7 @@
 import { createOpenRouter } from "@openrouter/ai-sdk-provider";
 import { streamText } from "ai";
 import { useEffect, useState } from "react";
+import Markdown from "react-markdown";
 
 import { Spinner } from "#/components/spinner/spinner.component";
 
@@ -98,12 +99,13 @@ Instructions:
 3. Highlight the most significant stories
 4. Group related articles by theme
 5. Keep your summary clear and concise
+6. Format your response using Markdown with proper headings, lists, and emphasis
 
 Here are the news articles metadata:
 
 ${JSON.stringify(newsArticles)}
 
-Please provide your analysis in a well-structured format.`,
+Please provide your analysis in a well-structured Markdown format.`,
             },
           ],
         });
@@ -135,7 +137,7 @@ Please provide your analysis in a well-structured format.`,
   }
 
   return (
-    <div className="prose max-w-none">
+    <div className="prose prose-lg max-w-none">
       {isLoading && streamedText === "" ? (
         <div className="flex items-center gap-3">
           <Spinner />
@@ -144,8 +146,8 @@ Please provide your analysis in a well-structured format.`,
           </span>
         </div>
       ) : (
-        <div className="whitespace-pre-wrap text-gray-700">
-          {streamedText}
+        <div className="text-gray-700">
+          <Markdown components={markdownComponents}>{streamedText}</Markdown>
           {isLoading ? (
             <span className="inline-block h-5 w-1 animate-pulse bg-blue-500" />
           ) : null}
@@ -154,3 +156,65 @@ Please provide your analysis in a well-structured format.`,
     </div>
   );
 }
+
+// Markdown component styles defined outside of the component to avoid re-creation
+const markdownComponents = {
+  h1: ({ children, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
+    <h1 className="mt-6 mb-4 text-3xl font-bold" {...props}>
+      {children}
+    </h1>
+  ),
+  h2: ({ children, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
+    <h2 className="mt-5 mb-3 text-2xl font-semibold" {...props}>
+      {children}
+    </h2>
+  ),
+  h3: ({ children, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
+    <h3 className="mt-4 mb-2 text-xl font-semibold" {...props}>
+      {children}
+    </h3>
+  ),
+  p: ({ children, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
+    <p className="mb-3" {...props}>
+      {children}
+    </p>
+  ),
+  ul: ({ children, ...props }: React.HTMLAttributes<HTMLUListElement>) => (
+    <ul className="mb-3 ml-6 list-disc" {...props}>
+      {children}
+    </ul>
+  ),
+  ol: ({ children, ...props }: React.HTMLAttributes<HTMLOListElement>) => (
+    <ol className="mb-3 ml-6 list-decimal" {...props}>
+      {children}
+    </ol>
+  ),
+  li: ({ children, ...props }: React.HTMLAttributes<HTMLLIElement>) => (
+    <li className="mb-1" {...props}>
+      {children}
+    </li>
+  ),
+  strong: ({ children, ...props }: React.HTMLAttributes<HTMLElement>) => (
+    <strong className="font-semibold" {...props}>
+      {children}
+    </strong>
+  ),
+  em: ({ children, ...props }: React.HTMLAttributes<HTMLElement>) => (
+    <em className="italic" {...props}>
+      {children}
+    </em>
+  ),
+  code: ({ children, ...props }: React.HTMLAttributes<HTMLElement>) => (
+    <code
+      className="rounded bg-gray-100 px-1 py-0.5 font-mono text-sm"
+      {...props}
+    >
+      {children}
+    </code>
+  ),
+  pre: ({ children, ...props }: React.HTMLAttributes<HTMLPreElement>) => (
+    <pre className="mb-3 overflow-x-auto rounded-lg bg-gray-100 p-4" {...props}>
+      {children}
+    </pre>
+  ),
+};

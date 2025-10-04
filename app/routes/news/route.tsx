@@ -99,7 +99,8 @@ export default function NewsRoute(props: Route.ComponentProps) {
               </p>
               {isMockData && (
                 <div className="mt-2 rounded-lg bg-yellow-100 px-4 py-2 text-sm text-yellow-800">
-                  ℹ️ Currently showing sample data. Real-time scraping is being optimized.
+                  ℹ️ Currently showing sample data. Real-time scraping is being
+                  optimized.
                 </div>
               )}
             </div>
@@ -254,7 +255,7 @@ function StreamingSummary({
               content: `You are a news analyst. Please provide a comprehensive summary of the following news articles from El Salvador. 
 
 Instructions:
-1. Provide an overview of the main topics covered
+1. Provide an overview in Spanish of the main topics covered
 2. Identify key trends or patterns across the articles
 3. Highlight the most significant stories
 4. Group related articles by theme
